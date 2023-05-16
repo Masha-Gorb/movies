@@ -1,0 +1,12 @@
+@use 'src/styles/config' as v;
+
+.container {
+  box-sizing: border-box;
+  width: 1240px;
+  //border: 1px solid red;
+  margin: 0 auto;
+  font-family: v.$generalFont;
+  //background-color: v.$darkColor;
+}
+
+

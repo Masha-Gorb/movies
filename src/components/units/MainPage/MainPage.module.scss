@@ -1,0 +1,64 @@
+@use 'src/styles/config' as v;
+
+
+.main__content {
+  color: white;
+}
+.main__slider {
+  width: 100%;
+  height: 530px;
+  background-color: antiquewhite;
+}
+
+.main__teaser {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  button {
+    color: v.$whiteColor;
+    background-color: #2e2b48;
+    border-radius: 8px;
+    width: 49%;
+    height: 48px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    a {
+      color: v.$whiteColor;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 15px;
+    }:hover {
+       cursor: pointer;
+     }
+  }:hover {
+     background-color: #3c395e;
+   }
+
+}
+
+.main__top10 {
+  height: 630px;
+  //background-color: v.$purpleColor;
+}
+
+.main__collections {
+  height: 400px;
+  a {
+    color: v.$whiteColor;
+    text-decoration: none;
+  }:hover {
+     cursor: pointer;
+   }
+}
+
+.main__info {
+  h3 {
+    color: v.$whiteColor;
+  }
+  width: 72%;
+  color: v.$greyColor;
+  font-size: 15px;
+  line-height: 20px;
+}
