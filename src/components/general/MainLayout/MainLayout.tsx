@@ -5,7 +5,7 @@ import { Header } from '@/components/general/Header/Header'
 import styles from './MainLayout.module.scss'
 import {MainPage} from "@/components/units/MainPage/MainPage";
 import {Footer} from "@/components/general/Footer/Footer";
-
+//todo - why it was deleted
 interface MainLayoutProps {
   children: JSX.Element | JSX.Element[],
   title?: string

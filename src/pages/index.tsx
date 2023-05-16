@@ -1,13 +1,11 @@
 
-import Link from 'next/link'
-import { MainLayout } from '@/components/general/MainLayout/MainLayout'
+import {NextPage} from 'next';
+import {IndexPage} from '@/components/special/IndexPage';
 
-export default function Index() {
+const IndexNextPage: NextPage = function() {
   return (
-    <MainLayout title={'Movies'}>
-      <h1>Hello! This is test commit for dev branch</h1>
-      <p><Link href='/about'>About</Link></p>
-      <p><Link href="/film/1">Film</Link></p>
-    </MainLayout>
+    <IndexPage />
   )
 }
+
+export default IndexNextPage;

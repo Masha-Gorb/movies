@@ -1,3 +1,15 @@
+
+// import {useAppSelector} from '@/store';
+// import {strlang} from '@/units/lang';
+// import styles from './Footer.module.scss'
+//
+// export function Footer() {
+//
+//   const lang = useAppSelector(state => state.settings.lang);
+//
+//   return (
+//     <div className={styles['footer']}>
+//       <div>{strlang('FOOTER_SOME_TEXT', lang)}</div>
 import styles from './Footer.module.scss'
 import global from "@/styles/global.module.scss";
 import Link from "next/link";
@@ -147,6 +159,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+//     </div>
+//   )
+// }

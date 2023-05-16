@@ -1,4 +1,5 @@
 
+@import '@/styles/abstract';
 @use 'src/styles/config' as v;
 
 .header {
@@ -56,4 +57,5 @@
     color: v.$whiteColor;
   }
 }
+  //@include debug-border(blue)
 }

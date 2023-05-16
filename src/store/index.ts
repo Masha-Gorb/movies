@@ -1,18 +1,48 @@
 
-import { configureStore } from '@reduxjs/toolkit'
-import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
-import { filmPageReducer } from './filmPage'
+import { 
+  combineReducers, 
+  configureStore, 
+  Action, ThunkAction,
+} from '@reduxjs/toolkit';
+import {useDispatch, useSelector, TypedUseSelectorHook} from 'react-redux';
+import {createWrapper, HYDRATE} from 'next-redux-wrapper';
+import {settingsReducer} from './settings';
+import {pageEnvReducer} from './pageEnv';
+import {filmSearchReducer} from './filmSearch';
+import {filmPageReducer} from './filmPage';
 
-export const store = configureStore({
-  reducer: {
-    // mainPage: mainPageReducer,
-    // filmsPage: filmsPageReducer,
-    filmPage: filmPageReducer
+const combinedReducer = combineReducers({
+  settings: settingsReducer,
+  pageEnv: pageEnvReducer,
+  // auth: authReducer,
+  // mainPage: mainPageReducer,
+  filmSearch: filmSearchReducer,
+  filmPage: filmPageReducer,
+});
+
+const wrapperReducer: (typeof combinedReducer) = (state, action) => {
+  if (action.type === HYDRATE) {
+    const nextState = {
+      ...state, 
+      ...action.payload,
+    };
+    return nextState;
+  } else {
+    return combinedReducer(state, action);
   }
-})
+};
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+const makeStore = () =>
+  configureStore({
+    reducer: wrapperReducer,
+  });
 
-export const useAppSelector = useSelector as TypedUseSelectorHook<RootState>;
+export type Store = ReturnType<typeof makeStore>;
+export type RootState = ReturnType<Store['getState']>;
+export type AppDispatch = Store['dispatch'];
+export type AppThunk<ReturnType = void> = 
+  ThunkAction<ReturnType, RootState, unknown, Action>;
+
+export const wrapper = createWrapper(makeStore, { debug: false });
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const useAppDispatch = () => useDispatch<AppDispatch>();

@@ -1,12 +1,19 @@
-
+//
+// import {MainMenu} from '@/components/general/MainMenu'
+// import {UserMenuTray} from '@/components/general/UserMenuTray'
+// import styles from './Header.module.scss'
 import s from './Header.module.scss'
 import Image from 'next/image'
 import header__logo from '../../../../public/icons/iviHeaderLogo.svg'
 import Link from "next/link";
 import global from "@/styles/global.module.scss";
-
-export function Header() {
-  return (
+//
+// export function Header() {
+//   return (
+//     <div className={styles['header']}>
+//       <div>header</div>
+//       <div><MainMenu /></div>
+//       <div><UserMenuTray /></div>
 
     <div className={global.container}>
     <div className={s.header}>
@@ -39,6 +46,6 @@ export function Header() {
 
       </div>
     </div>
-    </div>
-  )
-}
+//     </div>
+//   )
+// }

@@ -1,2 +1,3 @@
 
-export const siteName = 'Super site';
+export const version = 'v1';
+export const appName = 'Super site';
