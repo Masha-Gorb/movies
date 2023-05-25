@@ -1,14 +1,18 @@
 import global from "@/styles/global.module.scss";
 import s from './MainPage.module.scss'
-import {TestGallery} from "@/components/common/MainPageTop10Carousel/Top10FilmCarousel";
+import {Top10Films} from "@/components/common/MainPageTop10Carousel/Top10FilmCarousel";
+import {
+  FilmCollection,
+} from "@/components/common/MainPageFilmCollection/MainPageFilmCollectionCarousel";
 
 
 export function MainPage() {
   return (
     <div>
       <div className={s.main__slider}>
-        слайдер
+        slider
       </div>
+
       <div className={global.container}>
         <div className={s.main__content}>
 
@@ -23,10 +27,9 @@ export function MainPage() {
             </button>
           </section>
 
-
           <section className={s.main__top10}>
             <h3>ТОР 10 за неделю</h3>
-            <TestGallery/>
+            <Top10Films/>
           </section>
 
           <section className={s.main__info}>
@@ -53,10 +56,12 @@ export function MainPage() {
 
           <section className={s.main__collections}>
             <h3><a>Приключенческие боевики ›</a></h3>
+            <FilmCollection/>
           </section>
 
           <section className={s.main__collections}>
             <h3><a>Романтическое кино ›</a></h3>
+            <FilmCollection/>
           </section>
 
         </div>

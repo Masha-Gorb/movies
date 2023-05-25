@@ -12,40 +12,52 @@ interface PageProps {
   };
 }
 
-const MyApp = ({Component, ...restProps}: Omit<AppProps, 'pageProps'> & PageProps) => {
-
-  //console.log('rest: ', rest);
-  const {store, props} = wrapper.useWrappedStore(restProps);
+export default function App({ Component, ...restProps}: AppProps) {
+    const {store, props} = wrapper.useWrappedStore(restProps);
 
   return (
     <ReduxProvider store={store}>
       <Component {...props.pageProps} />
     </ReduxProvider>
-  );
+  )
 }
 
-MyApp.getInitialProps = wrapper.getInitialAppProps(store => async(appCtx) => {
-
-  const cookie = appCtx.ctx.req?.headers.cookie;
-  //console.log('cookie:', cookie);
-
-  if (cookie) {
-    const cookies = Cookie.parse(cookie);
-    store.dispatch(setSettingsFromCookies(cookies));
-  }
-
-  const childrenGip = await App.getInitialProps(appCtx);
-  //console.log('childInitialProps: ', childrenGip);
-
-  return {
-    pageProps: {
-      ...childrenGip.pageProps,
-      myVal: 123,
-    }
-  };
-});
-
-export default MyApp;
+//у меня не запускался проект
+//закомментила чтобы верстать
+// const MyApp = ({Component, ...restProps}: Omit<AppProps, 'pageProps'> & PageProps) => {
+//
+//   //console.log('rest: ', rest);
+//   const {store, props} = wrapper.useWrappedStore(restProps);
+//
+//   return (
+//     <ReduxProvider store={store}>
+//       <Component {...props.pageProps} />
+//     </ReduxProvider>
+//   );
+// }
+//
+// MyApp.getInitialProps = wrapper.getInitialAppProps(store => async(appCtx) => {
+//
+//   const cookie = appCtx.ctx.req?.headers.cookie;
+//   //console.log('cookie:', cookie);
+//
+//   if (cookie) {
+//     const cookies = Cookie.parse(cookie);
+//     store.dispatch(setSettingsFromCookies(cookies));
+//   }
+//
+//   const childrenGip = await App.getInitialProps(appCtx);
+//   //console.log('childInitialProps: ', childrenGip);
+//
+//   return {
+//     pageProps: {
+//       ...childrenGip.pageProps,
+//       myVal: 123,
+//     }
+//   };
+// });
+//
+// export default MyApp;
 
 // legacy
 /* function App({ Component, pageProps }: AppProps) {

@@ -1,0 +1,41 @@
+@use 'src/styles/config' as v;
+
+.item__container {
+  .item {
+    color: white;
+    text-transform: capitalize;
+    height: 235px;
+    width: 153px;
+    background-position: -900px -900px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 20px;
+    opacity: 0.9;
+
+  }:hover {
+     cursor: pointer;
+     transform: scale(1.06);
+     border-radius: 30px;
+   }
+}
+
+
+.filmCard__info {
+  .hide {
+    display: none;
+    i {
+      font-size: 30px;
+    }:hover {
+       display: block;
+       color: #834CC2;
+     }:hover {
+        display: block;
+               }
+  }
+}
+
+.filmCard__title {
+  margin-top: 10px;
+}

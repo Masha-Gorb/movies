@@ -10,9 +10,9 @@
 //   return (
 //     <div className={styles['footer']}>
 //       <div>{strlang('FOOTER_SOME_TEXT', lang)}</div>
+
 import styles from './Footer.module.scss'
 import global from "@/styles/global.module.scss";
-import Link from "next/link";
 
 export function Footer() {
   return (
@@ -37,7 +37,7 @@ export function Footer() {
             <ul>
               <li><a>Мой Иви</a></li>
               <li><a href={'https://www.ivi.ru/new'}>Что нового</a></li>
-              <li><Link href="/film/1">Фильмы</Link></li>
+              {/*<li><Link href="/film/1">Фильмы</Link></li>*/}
               <li><a href={'https://www.ivi.ru/series'}>Сериалы</a></li>
               <li><a href={'https://www.ivi.ru/animation'}>Мультфильмы</a></li>
               <li><a href={'https://www.ivi.ru/tvplus'}>TV+</a></li>
@@ -159,6 +159,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-//     </div>
-//   )
-// }
+     </div>
+  )
+}

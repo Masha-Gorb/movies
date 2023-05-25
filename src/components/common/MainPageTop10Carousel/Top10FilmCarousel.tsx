@@ -42,7 +42,7 @@ const Top10FilmCarousel = ({children}) => {
   )
 }
 
-export const TestGallery = () => {
+export const Top10Films = () => {
   return (
     <div>
       <div className={s.horizontalCenter}>

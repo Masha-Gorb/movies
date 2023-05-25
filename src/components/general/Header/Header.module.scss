@@ -1,5 +1,5 @@
 
-@import '@/styles/abstract';
+//@import '@/styles/abstract';
 @use 'src/styles/config' as v;
 
 .header {
@@ -35,8 +35,6 @@
     }
   }
 }
-
-
 
 .header__profile {
   ul {

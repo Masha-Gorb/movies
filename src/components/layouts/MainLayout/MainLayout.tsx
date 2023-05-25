@@ -3,6 +3,8 @@ import Head from 'next/head';
 import {useAppSelector} from '@/store';
 import {Header} from '@/components/general/Header';
 import {Footer} from '@/components/general/Footer';
+import {MainPage} from "@/components/units/MainPage/MainPage";
+import {FilmProfile} from "@/components/units/FilmProfile/FilmProfile";
 
 interface MainLayoutProps {
   children: JSX.Element | JSX.Element[]
@@ -11,7 +13,7 @@ interface MainLayoutProps {
 export function MainLayout({children}: MainLayoutProps) {
 
   const {title, navStack} = useAppSelector(state => state.pageEnv);
-
+//подставила вместо {children} страницу чтобы видеть верстку
   return (
     <>
       <Head>
@@ -23,7 +25,9 @@ export function MainLayout({children}: MainLayoutProps) {
             <Header />
           </header>
           <main className='page-main'>
-            {children}
+            {/*{children}*/}
+            {/*<MainPage/>*/}
+            <FilmProfile/>
           </main>
           <footer className='page-footer'>
             <Footer />

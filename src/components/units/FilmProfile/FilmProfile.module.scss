@@ -1,0 +1,170 @@
+@use 'src/styles/config' as v;
+
+.filmProfile__info {
+  display: flex;
+  margin-top: 30px;
+  .filmProfile__player {
+    background-color: #222222;
+    width: 765px;
+    height: 469px;
+    padding: 10px;
+    margin-right: 20px;
+    .player__window {
+      height: 400px;
+      background-color: #100e19;
+    }
+    .player__userActions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      button {
+        height: 40px;
+        padding: 10px;
+        border: transparent;
+        border-radius: 10px;
+        margin-right: 10px;
+        color: v.$whiteColor;
+        background-color: #333333;
+      }:hover {
+      cursor: pointer;
+             }
+    }
+  }
+  .filmProfile__cardInfo {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .cardInfo__smallText{
+    color: rgba(210, 210, 210, 0.8);
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .cardInfo__actors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    div{
+      height: 70px;
+      width: 70px;
+      border-radius: 70px;
+      border: 1px solid orange;
+      padding: 20px;
+      font-size: 10px;
+    }
+    height: 100px;
+  }
+  .cardInfo__award {
+    margin-top: 10px;
+    padding: 20px;
+    height: 100px;
+    background-color: #333333;
+    border-radius: 10px;
+  }
+  .cardInfo__description {
+    text-align: start;
+    margin-top: 10px;
+    width: 375px;
+    color: rgba(210, 210, 210, 0.8);
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.main__collections {
+  height: 400px;
+  a {
+    color: v.$whiteColor;
+    text-decoration: none;
+  }:hover {
+     cursor: pointer;
+   }
+}
+
+.creators__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  a {
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+    padding: 15px;
+    font-size: 10px;
+    border: 1px solid pink;
+  }
+}
+
+.filmProfile__section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.awards__cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .awardsCards__card {
+    text-align: center;
+    padding: 30px;
+    height: 130px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: #333333;
+  }
+}
+
+.additionalInfo__cards {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .additionalInfo__card {
+    text-align: center;
+    padding: 30px;
+    height: 130px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #333333;
+    margin-right: 20px;
+  }
+}
+
+.filmProfile__comments {
+  height: 400px;
+  border: 1px solid pink;
+}
+
+.filmProfile__mobile {
+  display: flex;
+  justify-content: space-between;
+  .filmProfile__mobilePng {
+    padding: 30px;
+    width: 600px;
+    height: 300px;
+  }
+  .mobile__info {
+    padding-top: 30px;
+    p {
+      text-align: start;
+      margin-top: 10px;
+      width: 375px;
+      color: rgba(210, 210, 210, 0.8);
+      font-size: 12px;
+      line-height: 20px;
+    }
+    button {
+      width: 215px;
+      height: 40px;
+      border: transparent;
+      border-radius: 10px;
+      background-color: v.$redColor;
+    }
+    a {
+      text-decoration: none;
+      color: v.$whiteColor
+    }
+  }
+}

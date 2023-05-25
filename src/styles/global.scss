@@ -1,5 +1,5 @@
-
-@import '@/styles/abstract';
+@use 'src/styles/config' as v;
+//@import '@/styles/abstract';
 
 * { box-sizing: border-box; }
 
@@ -9,7 +9,7 @@ body {
   color: $color-1;
   margin: 0;
   padding: 0;
-  background-color: $bg-color-1;
+  background-color: v.$darkColor;
 }
 
 // обертка, растягивающаяся по ширине содержимого
@@ -55,11 +55,12 @@ body {
 
 // ссылка по умолчанию
 a {
-  color: $color-2;
+  //color: $color-2;
   text-decoration: none;
   
   &:hover {
-    text-decoration: underline;
+    //text-decoration: underline;
+    cursor: pointer;
   }
 }
 
