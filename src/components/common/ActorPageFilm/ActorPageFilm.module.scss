@@ -1,0 +1,37 @@
+@use 'src/styles/config' as v;
+
+
+.film__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  padding: 10px;
+  button {
+    height: 40px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: v.$whiteColor;
+    background-color: v.$purpleColor;
+  }:hover {
+     cursor: pointer;
+   }
+}
+.film__img {
+  width: 90px;
+  height: 95px;
+  background-color: #56a8b7;
+}
+
+.film__info {
+  display: flex;
+  span {
+    margin-left: 10px;
+    color: rgba(210, 210, 210, 0.8);
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+}

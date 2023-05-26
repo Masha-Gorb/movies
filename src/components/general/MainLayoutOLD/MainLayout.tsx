@@ -1,6 +1,5 @@
 
 import Head from 'next/head'
-import { siteName } from '@/config'
 import { Header } from '@/components/general/Header/Header'
 import styles from './MainLayout.module.scss'
 import {MainPage} from "@/components/units/MainPage/MainPage";
@@ -16,7 +15,8 @@ export function MainLayout({ children, title }: MainLayoutProps) {
     <>
       <Head>
         <title>
-          {title ? `${title} | ${siteName}` : siteName}
+          {'movies'}
+          {/*{title ? `${title} | ${siteName}` : siteName}*/}
         </title>
       </Head>
 
@@ -29,7 +29,6 @@ export function MainLayout({ children, title }: MainLayoutProps) {
           {/*{children}*/}
           <MainPage/>
         </main>
-
         <footer>
           <Footer/>
         </footer>

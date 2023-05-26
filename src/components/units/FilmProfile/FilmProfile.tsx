@@ -204,11 +204,6 @@ export const FilmProfile = () => {
 
       </section>
 
-
-
-
-
-
     </div>
   )
 }

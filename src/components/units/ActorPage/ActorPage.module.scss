@@ -1,0 +1,31 @@
+@use 'src/styles/config' as v;
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 1240px;
+  margin: 0 auto;
+  font-family: v.$generalFont;
+  background-color: v.$darkColor;
+}
+.actorPage__wrapper {
+  width: 600px;
+  padding-bottom: 30px;
+  h4 {
+    color: rgba(210, 210, 210, 0.8);
+  }
+  span {
+    margin-left: 10px;
+    color: rgba(210, 210, 210, 0.8);
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.actorPage__img {
+  margin-top: 20px;
+  width: 100px;
+  height: 120px;
+  border-radius: 20px;
+}
