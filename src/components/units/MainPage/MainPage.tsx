@@ -6,6 +6,7 @@ import {
 } from "@/components/common/MainPageFilmCollection/MainPageFilmCollectionCarousel";
 
 
+
 export function MainPage() {
   return (
     <div>

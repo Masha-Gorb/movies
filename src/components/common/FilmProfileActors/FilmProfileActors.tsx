@@ -1,17 +1,18 @@
 
+type PropsType = {
+  actors: ActorPropsType[]
+}
+type ActorPropsType = {
+  name: string
+  role: string
+  img: string
+  id: number
+}
 
-export const FilmProfileActors = (props: any) => {
+export const FilmProfileActors = (props: PropsType) => {
   return (
     <div>
-      {/*{props.actors.map(m => {return <div>*/}
-      {/*  */}
-      {/*  </div>})}*/}
-      {/*<a>*/}
-      {/*  <div>face</div>*/}
-      {/*  <span>Name 1</span>*/}
-      {/*  <br/>*/}
-      {/*  <span>director</span>*/}
-      {/*</a>*/}
+
     </div>
   )
 }

@@ -6,7 +6,7 @@ import {Footer} from '@/components/general/Footer';
 import {MainPage} from "@/components/units/MainPage/MainPage";
 import {FilmProfile} from "@/components/units/FilmProfile/FilmProfile";
 import {ActorPage} from "@/components/units/ActorPage/ActorPage";
-import {actors} from "@/components/mockData";
+import {actors, films} from "@/components/mockData";
 
 interface MainLayoutProps {
   children: JSX.Element | JSX.Element[]
@@ -29,13 +29,13 @@ export function MainLayout({children}: MainLayoutProps) {
           <main className='page-main'>
             {/*{children}*/}
             {/*<MainPage/>*/}
-            {/*<FilmProfile/>*/}
-            <ActorPage
-              name={actors[0].name}
-              eng_name={actors[0].eng_name}
-              info={actors[0].info}
-              films={actors[0].films}
-            />
+            <FilmProfile films={films} />
+            {/*<ActorPage*/}
+            {/*  name={actors[0].name}*/}
+            {/*  eng_name={actors[0].eng_name}*/}
+            {/*  info={actors[0].info}*/}
+            {/*  films={actors[0].films}*/}
+            {/*/>*/}
           </main>
           <footer className='page-footer'>
             <Footer />

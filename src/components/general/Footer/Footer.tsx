@@ -16,7 +16,7 @@ import global from "@/styles/global.module.scss";
 
 export function Footer() {
   return (
-    <div className={global.container}>
+    <footer className={global.container}>
       <div className={styles.footer}>
         <nav className={styles.footer__nav}>
           <div className={styles.footer__navBlock}>
@@ -81,7 +81,6 @@ export function Footer() {
               icon
             </div>
             <p><a>Смотрите фильмы, сериалы и мультфильмы без рекламы</a></p>
-            <div>(сделать модалку)</div>
           </div>
 
         </nav>
@@ -159,6 +158,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-     </div>
+     </footer>
   )
 }

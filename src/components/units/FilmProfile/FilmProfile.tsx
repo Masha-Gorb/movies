@@ -3,20 +3,25 @@ import {FilmCollection} from "@/components/common/MainPageFilmCollection/MainPag
 import global from "@/styles/global.module.scss";
 import mobile from '../../../../public/img/filmProfile__mobile.png'
 import Image from 'next/image'
-import {FilmProfileActors} from "@/components/common/FilmProfileActors/FilmProfileActors";
 
+type PropsType = {
+  films: FilmPropsType[]
+}
 
-export const FilmProfile = () => {
+type FilmPropsType = {
+  title: string
+  prod_year: string
+  duration_min: string
+  age_limit: string
+  film_description: string
+  country: string
+  ratingIvi: string
+  awards: any[]
+  genre: string[]
+  roles: any[]
+}
 
-  const actors = [
-    {name: 'John', role: 'director'},
-    {name: 'Jane', role: 'actress'},
-    {name: 'Josh', role: 'actor'},
-    {name: 'Mark', role: 'actor'},
-    {name: 'Mia', role: 'actress'},
-    {name: 'Lea', role: 'actress'},
-  ]
-
+export const FilmProfile = (props: PropsType) => {
   return (
     <div className={global.container}>
       <div>Фильмы - Комедии</div>
@@ -37,20 +42,20 @@ export const FilmProfile = () => {
         </div>
 
         <div className={s.filmProfile__cardInfo}>
-          <h1>Блондинка в законе</h1>
-          <h1>(Фильм 2001)</h1>
+          <h1>{props.films[0].title}</h1>
+          <h1>(Фильм {props.films[0].prod_year})</h1>
 
           <div className={s.cardInfo__smallText}>
-            <a>2001</a>
-            <span>1 ч. 35 мин.</span>
-            <span>12+</span>
+            <a>{props.films[0].prod_year} </a>
+            <span>{props.films[0].duration_min} </span>
+            <span>{props.films[0].age_limit}</span>
           </div>
 
           <div className={s.cardInfo__smallText}>
-            <a>США </a>
-            <a>Комедии </a>
-            <a>Мелодрамы </a>
-            <a>Зарубежные</a>
+            <a>{props.films[0].country} </a>
+            <a>{props.films[0].genre[0]} </a>
+            <a>{props.films[0].genre[1]} </a>
+            <a>{props.films[0].genre[2]}</a>
           </div>
 
           <div className={s.cardInfo__smallText}>
@@ -60,24 +65,22 @@ export const FilmProfile = () => {
           </div>
 
           <div className={s.cardInfo__actors}>
-            <div>rating</div>
+            <div>{props.films[0].ratingIvi}</div>
             <div>actress1</div>
             <div>actor1</div>
             <div>actor2</div>
           </div>
 
           <div className={s.cardInfo__award}>
-             Премия канала МТВ
+            {props.films[0].awards[0].title}
           </div>
 
           <div className={s.cardInfo__description}>
-            <p>
-              Фильм, превративший актрису Риз Уизерспун в высокооплачиваемую голливудскую знаменитость – «Блондинка в законе» стала для двадцатипятилетней улыбчивой красавицы настоящим звёздным часом, как и для начинающего режиссёра Роберта Лукетича, после этой лёгкой романтической комедии неоднократно выдававшего не менее успешные картины («Если свекровь – монстр», «Голая правда», «Киллеры»). Вдохновляющая...
-            </p>
+            <p>{props.films[0].film_description}</p>
           </div>
 
           <div className={s.cardInfo__award}>
-            Рейтинг Иви
+            Рейтинг Иви {props.films[0].ratingIvi}
           </div>
         </div>
       </div>
@@ -90,7 +93,7 @@ export const FilmProfile = () => {
       <section className={s.filmProfile__section}>
         <h3><a>Актеры и создатели</a></h3>
         <div className={s.creators__list}>
-          {/*<FilmProfileActors actors={actors}/>*/}
+          {/*<FilmProfileActors actors={props.films[0].roles}/>*/}
           <a>
             <div>face</div>
             <span>Name 1</span>

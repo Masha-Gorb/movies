@@ -22,8 +22,8 @@ export default function App({ Component, ...restProps}: AppProps) {
   )
 }
 
-//у меня не запускался проект
-//закомментила чтобы верстать
+
+// //закомментила чтобы верстать
 // const MyApp = ({Component, ...restProps}: Omit<AppProps, 'pageProps'> & PageProps) => {
 //
 //   //console.log('rest: ', rest);
